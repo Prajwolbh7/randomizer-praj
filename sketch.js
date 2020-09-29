@@ -36,7 +36,7 @@ function draw() {
 
   if (animating == true){
 
-    fill(random(10,100));
+    fill(random(10,100), random(20,50),random(90,100));
    ellipse(random(width),random(height),random(150,220));
    rect(random(width),random(height),random(50,100));
    circle(random(width),random(height),random(50,60));
