@@ -40,8 +40,9 @@ function draw() {
    ellipse(random(width),random(height),random(150,220));
    rect(random(width),random(height),random(50,100));
    circle(random(width),random(height),random(50,60));
-  }
-
+}else if(animating=false) {
+  color(200);
+}
 }
 function randiomizer() {
 
@@ -59,9 +60,12 @@ function randiomizer() {
 
   friends.splice(randomIndex,1);
   //console.log(friends);
+  animating= false;
+
 }else {
-  background(random(200, 255));
-  text("NO favourite food!!!", 50,50);
+
+  background(0);
+  text("NO favourites food!!!", 150,300);
 }
 
 }
