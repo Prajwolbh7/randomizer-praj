@@ -28,11 +28,13 @@ function setup() {
   textSize(40);
 
   text("click to randomize", 100,100);
+  //setInterval(randomizer,2000);
 
 
 }
 
 function draw() {
+  //background(200);
 
   if (animating == true){
 
@@ -40,11 +42,15 @@ function draw() {
    ellipse(random(width),random(height),random(150,220));
    rect(random(width),random(height),random(50,100));
    circle(random(width),random(height),random(50,60));
-}else if(animating=false) {
-  color(200);
-}
+  }else {
+
+  }
+
+
 }
 function randiomizer() {
+
+
 
   animating = false;
   if(friends[0]){
@@ -60,7 +66,7 @@ function randiomizer() {
 
   friends.splice(randomIndex,1);
   //console.log(friends);
-  animating= false;
+
 
 }else {
 
@@ -72,8 +78,7 @@ function randiomizer() {
 
 function mousePressed(){
 
-  animating = true;
+ animating = true;
   setTimeout(randiomizer,2000);
-
 
 }
